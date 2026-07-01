@@ -7,7 +7,7 @@ def frame_e(janela):
         master=janela,
         width=200,
         height=580,
-        fg_color="#13153A",
+        fg_color="#172554",
         corner_radius=20
     )
 
@@ -16,6 +16,7 @@ def frame_e(janela):
     imagem_principal(frame_esquerdo)
     nome_app(frame_esquerdo)
     texto_app(frame_esquerdo)
+    botao_importar(frame_esquerdo)
 
 
 def imagem_principal(frame):
@@ -48,3 +49,27 @@ def texto_app(frame):
     )
 
     centralizar_widget(texto_aplicativo, frame, y=165)
+
+def botao_importar(frame):
+    imagem_importar = ctk.CTkImage(
+        light_image=Image.open("assets/imagens/importar_arquivos.png"),
+        dark_image=Image.open("assets/imagens/importar_arquivos.png"),
+        size=(40, 40),
+    )
+
+    
+    botao_importar = ctk.CTkButton(
+        frame,
+        text="Importar NF-e",
+        image=imagem_importar,
+        compound="left",
+        width=150,
+        height=40,
+        fg_color="#1E52A7",
+        hover_color="#2563EB",
+        corner_radius=20,
+        text_color="white",
+        font=("Arial", 15, "bold")
+    )
+
+    centralizar_widget(botao_importar, frame, y=220)

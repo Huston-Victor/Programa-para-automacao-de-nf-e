@@ -7,7 +7,7 @@ def frame_e(janela):
         master=janela,
         width=200,
         height=580,
-        fg_color="#171B4D",
+        fg_color="#13153A",
         corner_radius=20
     )
 
@@ -34,7 +34,7 @@ def nome_app(frame):
         frame,
         text="Leitor De NF-e",
         text_color="white",
-        font=("Arial", 16)
+        font=("Arial", 26, "bold")
     )
 
     centralizar_widget(nome_aplicativo, frame, y=140)
@@ -43,8 +43,8 @@ def texto_app(frame):
     texto_aplicativo = ctk.CTkLabel(
         frame,
         text="Automação de Lançamentos",
-        text_color="white",
-        font=("Arial", 12)
+        text_color="grey",
+        font=("Arial", 14)
     )
 
-    centralizar_widget(texto_aplicativo, frame, y=160)
+    centralizar_widget(texto_aplicativo, frame, y=165)

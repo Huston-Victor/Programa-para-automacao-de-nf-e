@@ -1,9 +1,5 @@
 import customtkinter as ctk
 
-#================================================
-#Função Responsável Por Centralizar O App Na Tela
-#================================================
-
 def centralizar(janela, largura, altura):
 
     largura_tela = janela.winfo_screenwidth()

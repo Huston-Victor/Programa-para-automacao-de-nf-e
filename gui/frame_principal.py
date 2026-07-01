@@ -1,4 +1,5 @@
 import customtkinter as ctk
+from PIL import Image
 
 def frame_p(janela):
 
@@ -6,8 +7,42 @@ def frame_p(janela):
         master=janela,
         width=770,
         height=580,
-        fg_color="#171B4D",
+        fg_color="#13153A",
         corner_radius=20
     )
 
     frame_principal.place(x=220, y=10)
+    texto_importarNFe(frame_principal)
+    sub_importar(frame_principal)
+    frame_tracejado(frame_principal)
+    
+
+def texto_importarNFe(frame):
+    texto_importar = ctk.CTkLabel(
+        frame,
+        text="Importar NF-e",
+        text_color="white",
+        font=("Arial", 26, "bold")
+    )
+    texto_importar.place(x=20, y=20)
+
+def sub_importar(frame):
+    sub_texto_importar = ctk.CTkLabel(
+        frame,
+        text="Selecione ou Arraste os Arquivos da Nota Fiscal Para Iniciar o Processamento",
+        text_color="grey",
+        font=("Arial", 14)
+    )
+    sub_texto_importar.place(x=20, y=60)
+
+def frame_tracejado (frame):
+    frame_tracejado = ctk.CTkFrame(
+        master=frame,
+        width=730,
+        height=400,
+        fg_color="#1A1D3B",
+        corner_radius=20
+    )
+
+    frame_tracejado.place(x=20, y=100)
+

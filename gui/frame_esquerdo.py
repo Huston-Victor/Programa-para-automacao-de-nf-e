@@ -17,8 +17,10 @@ def frame_e(janela):
     nome_app(frame_esquerdo)
     texto_app(frame_esquerdo)
     botao_importar(frame_esquerdo)
-
-
+    botao_abastesimento(frame_esquerdo)
+    linha_ajuda(frame_esquerdo)
+    botao_ajuda(frame_esquerdo)
+    
 def imagem_principal(frame):
     imagem = ctk.CTkImage(
         light_image=Image.open("assets/imagens/imagem_leitor.png"),
@@ -54,7 +56,7 @@ def botao_importar(frame):
     imagem_importar = ctk.CTkImage(
         light_image=Image.open("assets/imagens/importar_arquivos.png"),
         dark_image=Image.open("assets/imagens/importar_arquivos.png"),
-        size=(40, 40),
+        size=(35, 35),
     )
 
     
@@ -65,11 +67,67 @@ def botao_importar(frame):
         compound="left",
         width=150,
         height=40,
-        fg_color="#1E52A7",
-        hover_color="#2563EB",
+        fg_color="#0E3E8B",
+        hover_color="#1B58DD",
         corner_radius=20,
         text_color="white",
         font=("Arial", 15, "bold")
     )
 
     centralizar_widget(botao_importar, frame, y=220)
+
+def botao_abastesimento (frame):
+    imagem_abastecimento = ctk.CTkImage(
+        light_image=Image.open("assets/imagens/abastecimento.png"),
+        dark_image=Image.open("assets/imagens/abastecimento.png"),
+        size=(28, 28),
+    )
+
+    botao_abastecimento = ctk.CTkButton(
+        frame,
+        text="Abastecimento",
+        image=imagem_abastecimento,
+        compound="left",
+        width=150,
+        height=40,
+        fg_color="#0E3E8B",
+        hover_color="#1B58DD",
+        corner_radius=20,
+        text_color="white",
+        font=("Arial", 15, "bold")
+    )
+
+    centralizar_widget(botao_abastecimento, frame, y=270)
+
+def linha_ajuda (frame):
+    linha = ctk.CTkFrame(
+        master=frame,
+        width=180,
+        height=2,
+        fg_color="darkgrey"
+    )
+
+    centralizar_widget(linha, frame, y=530)
+
+def botao_ajuda (frame):
+    imagem_ajuda = ctk.CTkImage(
+        light_image=Image.open("assets/imagens/botao_ajuda.png"),
+        dark_image=Image.open("assets/imagens/botao_ajuda.png"),
+        size=(28, 28),
+    )
+
+    botao_ajuda = ctk.CTkButton(
+        frame,
+        text="Ajuda",
+        image=imagem_ajuda,
+        compound="left",
+        width=150,
+        height=40,
+        fg_color="#172554",
+        hover_color="#1B58DD",
+        corner_radius=20,
+        text_color="grey",
+        font=("Arial", 15, "bold")
+    )
+
+    centralizar_widget(botao_ajuda, frame, y=555)

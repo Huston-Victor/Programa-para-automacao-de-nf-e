@@ -18,6 +18,7 @@ def frame_p(janela):
     sub_importar(frame_principal)
     imagem_tracejada(frame_principal)
     frame_tracejado(frame_principal) 
+    imagem_importar_arquivos(frame_principal)
     
 
 def texto_importarNFe(frame):
@@ -57,6 +58,22 @@ def frame_tracejado (frame):
         
     )
     frame_tracejado.place(x=40, y=125)
+
+def imagem_importar_arquivos(frame):
+    imagem_importar = ctk.CTkImage(
+        light_image=Image.open("assets/imagens/importar_arquivos.png"),
+        dark_image=Image.open("assets/imagens/importar_arquivos.png"),
+        size=(100, 100),
+        
+    )
+    label_imagem = ctk.CTkLabel(
+    frame,
+    image=imagem_importar,
+    text="",
+    fg_color=frame.cget("fg_color")
+)
+    label_imagem.place(x=340, y=170)
+
 
 
 

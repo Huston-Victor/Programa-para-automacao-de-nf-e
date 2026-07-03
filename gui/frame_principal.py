@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from PIL import Image
+from gui.tela_tracejada import tela_tracejada
 
 from utils.centralizar import centralizar_widget
 
@@ -18,7 +19,6 @@ def frame_p(janela):
     sub_importar(frame_principal)
     imagem_tracejada(frame_principal)
     frame_tracejado(frame_principal) 
-    imagem_importar_arquivos(frame_principal)
     
 
 def texto_importarNFe(frame):
@@ -50,29 +50,17 @@ def imagem_tracejada(frame):
     label_borda.place(x=20, y=100)
 
 def frame_tracejado (frame):
-    frame_tracejado = ctk.CTkFrame(
+    frame_interno_tracejado = ctk.CTkFrame(
         master=frame,
         width=693,
         height=342,
         fg_color="#273449",
         
     )
-    frame_tracejado.place(x=40, y=125)
+    frame_interno_tracejado.place(x=40, y=125)
 
-def imagem_importar_arquivos(frame):
-    imagem_importar = ctk.CTkImage(
-        light_image=Image.open("assets/imagens/importar_arquivos.png"),
-        dark_image=Image.open("assets/imagens/importar_arquivos.png"),
-        size=(100, 100),
-        
-    )
-    label_imagem = ctk.CTkLabel(
-    frame,
-    image=imagem_importar,
-    text="",
-    fg_color=frame.cget("fg_color")
-)
-    label_imagem.place(x=340, y=170)
+    tela_tracejada(frame_interno_tracejado)
+
 
 
 

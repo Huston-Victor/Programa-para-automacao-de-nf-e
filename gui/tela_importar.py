@@ -2,23 +2,12 @@ import customtkinter as ctk
 from PIL import Image
 from gui.tela_tracejada import tela_tracejada
 
-from utils.centralizar import centralizar_widget
+def frame_importar(frame):
 
-def frame_p(janela):
-
-    frame_principal = ctk.CTkFrame(
-        master=janela,
-        width=770,
-        height=580,
-        fg_color="#1E293B",
-        corner_radius=20
-    )
-
-    frame_principal.place(x=220, y=10)
-    texto_importarNFe(frame_principal)
-    sub_importar(frame_principal)
-    imagem_tracejada(frame_principal)
-    frame_tracejado(frame_principal) 
+    texto_importarNFe(frame)
+    sub_importar(frame)
+    imagem_tracejada(frame)
+    frame_tracejado(frame) 
     
 
 def texto_importarNFe(frame):

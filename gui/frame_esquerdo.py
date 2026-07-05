@@ -1,8 +1,10 @@
 import customtkinter as ctk
 from PIL import Image
 from utils.centralizar import centralizar_widget
+from gui.tela_importar import frame_importar
+from gui.tela_abastecimento import frame_abastecimento
 
-def frame_e(janela):
+def frame_e(janela, trocar):
     frame_esquerdo = ctk.CTkFrame(
         master=janela,
         width=200,
@@ -16,8 +18,8 @@ def frame_e(janela):
     imagem_principal(frame_esquerdo)
     nome_app(frame_esquerdo)
     texto_app(frame_esquerdo)
-    botao_importar(frame_esquerdo)
-    botao_abastesimento(frame_esquerdo)
+    botao_importar(frame_esquerdo, trocar)
+    botao_abastesimento(frame_esquerdo, trocar)
     linha_ajuda(frame_esquerdo)
     botao_ajuda(frame_esquerdo)
     
@@ -52,7 +54,7 @@ def texto_app(frame):
 
     centralizar_widget(texto_aplicativo, frame, y=165)
 
-def botao_importar(frame):
+def botao_importar(frame, trocar):
     imagem_importar = ctk.CTkImage(
         light_image=Image.open("assets/imagens/importar_arquivos.png"),
         dark_image=Image.open("assets/imagens/importar_arquivos.png"),
@@ -71,12 +73,13 @@ def botao_importar(frame):
         hover_color="#1B58DD",
         corner_radius=20,
         text_color="white",
-        font=("Arial", 15, "bold")
+        font=("Arial", 15, "bold"),
+        command=lambda: trocar(frame_importar)
     )
 
     centralizar_widget(botao_importar, frame, y=220)
 
-def botao_abastesimento (frame):
+def botao_abastesimento(frame, trocar):
     imagem_abastecimento = ctk.CTkImage(
         light_image=Image.open("assets/imagens/abastecimento.png"),
         dark_image=Image.open("assets/imagens/abastecimento.png"),
@@ -94,7 +97,8 @@ def botao_abastesimento (frame):
         hover_color="#1B58DD",
         corner_radius=20,
         text_color="white",
-        font=("Arial", 15, "bold")
+        font=("Arial", 15, "bold"),
+        command=lambda: trocar(frame_abastecimento)
     )
 
     centralizar_widget(botao_abastecimento, frame, y=270)

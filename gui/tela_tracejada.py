@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from PIL import Image
+from utils.selecionar_arquivo import selecionar_arquivo
 
 def tela_tracejada(frame):
     imagem_importar = ctk.CTkImage(
@@ -58,6 +59,7 @@ def botao_selecionar(frame):
         fg_color="#1357C5",
         hover_color="#1B58DD",
         text_color="white",
-        font=("Arial", 15, "bold")
+        font=("Arial", 15, "bold"),
+        command = selecionar_arquivo  
     )
     botao_pasta.place(x=250, y=220)

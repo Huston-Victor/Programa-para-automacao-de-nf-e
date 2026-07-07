@@ -1,6 +1,6 @@
-from gui.frame_esquerdo import frame_e
-from gui.base_troca_janela import base_troca
-from gui.tela_importar import frame_importar
+from gui.tela_inicial.frame_esquerdo import frame_e
+from gui.tela_inicial.base_troca_janela import base_troca
+from gui.tela_inicial.tela_importar import frame_importar
 from utils.trocar_janelas import trocar_tela
 
 

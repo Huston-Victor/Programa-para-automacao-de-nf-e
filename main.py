@@ -2,8 +2,7 @@ import customtkinter as ctk
 
 from config.configuracoes import configuracoes_janela
 from utils.centralizar import centralizar
-from gui.tela_inicial import criar_tela_inicial
-
+from gui.tela_inicial.tela_inicial import criar_tela_inicial
 
 janela = ctk.CTk()
 

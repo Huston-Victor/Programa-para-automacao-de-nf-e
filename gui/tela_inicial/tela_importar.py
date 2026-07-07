@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from PIL import Image
-from gui.tela_tracejada import tela_tracejada
+from gui.tela_inicial.tela_tracejada import tela_tracejada
 
 def frame_importar(frame):
 

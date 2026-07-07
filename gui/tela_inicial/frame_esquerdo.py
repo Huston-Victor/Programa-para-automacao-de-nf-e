@@ -1,8 +1,8 @@
 import customtkinter as ctk
 from PIL import Image
 from utils.centralizar import centralizar_widget
-from gui.tela_importar import frame_importar
-from gui.tela_abastecimento import frame_abastecimento
+from gui.tela_inicial.tela_importar import frame_importar
+from gui.tela_inicial.tela_abastecimento import frame_abastecimento
 
 def frame_e(janela, trocar):
     frame_esquerdo = ctk.CTkFrame(
